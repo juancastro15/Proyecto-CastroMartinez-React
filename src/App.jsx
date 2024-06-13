@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Navbar } from "./components/navbar/Navbar";
-import ItemListContainer from "./pages/itemListContainer/ItemListContainer";
-import LoginContainer from "./pages/login/LoginContainer";
+import ItemListContainer from "./pages/ItemListContainer";
 
 function App() {
   const [estaMontado, setEstaMontado] = useState(false);
@@ -13,12 +12,6 @@ function App() {
   return (
     <>
       <Navbar />
-
-      <LoginContainer />
-
-      {estaMontado ? <ItemListContainer greeting={"Hola como estas?"} /> : null}
-
-      <button onClick={montarDesmontar}>montar / desmontar</button>
     </>
   );
 }

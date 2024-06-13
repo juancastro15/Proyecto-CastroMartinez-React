@@ -1,5 +1,5 @@
 import CartWidget from "../cartWidget/CartWidget";
-import "./navbar.css";
+import "./Navbar.css";
 
 import logo from "../../images/logo.png";
 
@@ -18,9 +18,10 @@ export const Navbar = () => {
       />
 
       <ul style={{ display: "flex", gap: "20px" }}>
-        <li style={{ listStyle: "none" }}>Todas</li>
-        <li style={{ listStyle: "none" }}>Urbanas</li>
-        <li style={{ listStyle: "none" }}>Deportivas</li>
+        <li style={{ listStyle: "none" }}>All</li>
+        <li style={{ listStyle: "none" }}>Coats</li>
+        <li style={{ listStyle: "none" }}>Jerseys</li>
+        <li style={{ listStyle: "none" }}>Shorts</li>
       </ul>
 
       <CartWidget />

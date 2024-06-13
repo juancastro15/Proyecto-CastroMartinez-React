@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import ItemList from "./ItemList";
+// import ItemList from "./ItemList";
 
 const ItemListContainer = ({ greeting, a, b, c, d }) => {
   const [numero, setNumero] = useState(0);
@@ -37,14 +37,14 @@ const ItemListContainer = ({ greeting, a, b, c, d }) => {
     setNombre("maria");
   };
 
-  return (
+  /*return (
     <ItemList
       greeting={greeting}
       sumar={sumar}
       cambiarNombre={cambiarNombre}
       numero={numero}
     />
-  );
+  );*/
 };
 
 export default ItemListContainer;

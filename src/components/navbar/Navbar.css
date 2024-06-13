@@ -1,8 +1,10 @@
 .navbarContainer {
-    background-color: peru;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    min-height: 10vh;
-    align-items: center;
-  }
+  background-color: #fff;
+  border-bottom: 2px solid #111111;
+  margin: 0px 5px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  min-height: 10vh;
+  align-items: center;
+}
