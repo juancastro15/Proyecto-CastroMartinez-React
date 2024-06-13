@@ -10,19 +10,19 @@ const ItemListContainer = ({ greeting, a, b, c, d }) => {
     console.log("me ejecute");
     const productos = [
       {
-        nombre: "Camiseta",
-        precio: 19.99,
-        categoria: "Ropa",
-      },
-      {
-        nombre: "Laptop",
-        precio: 899.99,
-        categoria: "Electrónica",
-      },
-      {
-        nombre: "Cafetera",
+        nombre: "Barcelona",
         precio: 49.99,
-        categoria: "Hogar",
+        categoria: "Jersey",
+      },
+      {
+        nombre: "Real Madrid",
+        precio: 69.99,
+        categoria: "Coat",
+      },
+      {
+        nombre: "Chelsea",
+        precio: 49.99,
+        categoria: "Hat",
       },
     ];
 
@@ -37,14 +37,7 @@ const ItemListContainer = ({ greeting, a, b, c, d }) => {
     setNombre("maria");
   };
 
-  return (
-    <ItemList
-      greeting={greeting}
-      /*sumar={sumar}
-      cambiarNombre={cambiarNombre}
-      numero={numero}*/
-    />
-  );
+  return <ItemList greeting={greeting} />;
 };
 
 export default ItemListContainer;
