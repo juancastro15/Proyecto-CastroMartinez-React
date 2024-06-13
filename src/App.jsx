@@ -1,17 +1,12 @@
 import { useState } from "react";
 import { Navbar } from "./components/navbar/Navbar";
-import ItemListContainer from "./pages/ItemListContainer";
+import ItemListContainer from "./pages/itemListContainer/ItemListContainer";
 
 function App() {
-  const [estaMontado, setEstaMontado] = useState(false);
-
-  const montarDesmontar = () => {
-    setEstaMontado(!estaMontado);
-  };
-
   return (
     <>
       <Navbar />
+      <ItemListContainer greeting="OUR STORY" />
     </>
   );
 }
