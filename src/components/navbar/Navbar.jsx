@@ -8,8 +8,8 @@ export const Navbar = () => {
     <div className="navbarContainer">
       <img
         // src={logo}
-        src="https://res.cloudinary.com/dnqfh2chg/image/upload/v1718150058/probando/images_za8tj5.png"
-        alt=""
+        src={logo}
+        alt="logo de la empresa"
         style={{
           width: "100px",
           height: "100px",
@@ -22,6 +22,7 @@ export const Navbar = () => {
         <li style={{ listStyle: "none" }}>Coats</li>
         <li style={{ listStyle: "none" }}>Jerseys</li>
         <li style={{ listStyle: "none" }}>Shorts</li>
+        <li style={{ listStyle: "none" }}>About US</li>
       </ul>
 
       <CartWidget />

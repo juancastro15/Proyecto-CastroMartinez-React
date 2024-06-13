@@ -1,8 +1,8 @@
-import { FaCartPlus } from "react-icons/fa";
+import { IoBagOutline } from "react-icons/io5";
 const CartWidget = () => {
   return (
     <div>
-      <FaCartPlus color="black" size={40} />
+      <IoBagOutline color="black" size={40} />
     </div>
   );
 };
