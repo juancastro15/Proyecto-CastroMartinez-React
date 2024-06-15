@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Navbar } from "./components/navbar/Navbar";
 import ItemListContainer from "./pages/itemListContainer/ItemListContainer";
 

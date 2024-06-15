@@ -1,7 +1,7 @@
-const ItemList = ({ greeting, numero, sumar, cambiarNombre }) => {
+const ItemList = ({ greeting }) => {
   return (
     <div>
-      <h1> {greeting} </h1>
+      <h1>{greeting}</h1>
     </div>
   );
 };
