@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <ItemListContainer greeting="OUR STORY" />
+      <ItemListContainer greeting="LA CABRA STYLE" />
     </>
   );
 }
