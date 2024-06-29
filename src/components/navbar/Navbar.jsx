@@ -7,7 +7,6 @@ export const Navbar = () => {
   return (
     <div className="navbarContainer">
       <img
-        // src={logo}
         src={logo}
         alt="logo de la empresa"
         style={{
