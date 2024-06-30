@@ -1,30 +1,42 @@
 import CartWidget from "../cartWidget/CartWidget";
 import "./Navbar.css";
-
+import { Link } from "react-router-dom";
 import logo from "../../images/logo.png";
 
 export const Navbar = () => {
   return (
-    <div className="navbarContainer">
-      <img
-        src={logo}
-        alt="logo de la empresa"
-        style={{
-          width: "100px",
-          height: "100px",
-          objectFit: "cover",
-        }}
-      />
+    <div>
+      <>
+        <div className="navbarContainer">
+          <Link to="/">
+            <img
+              src={logo}
+              alt="logo de la empresa"
+              style={{
+                width: "100px",
+                height: "100px",
+                objectFit: "cover",
+              }}
+            />
+          </Link>
 
-      <ul style={{ display: "flex", gap: "20px" }}>
-        <li style={{ listStyle: "none" }}>All</li>
-        <li style={{ listStyle: "none" }}>Coats</li>
-        <li style={{ listStyle: "none" }}>Jerseys</li>
-        <li style={{ listStyle: "none" }}>Shorts</li>
-        <li style={{ listStyle: "none" }}>About US</li>
-      </ul>
-
-      <CartWidget />
+          <ul className="categories" style={{ display: "flex", gap: "20px" }}>
+            <Link to="/" style={{ listStyle: "none" }}>
+              All
+            </Link>
+            <Link to="/category/Coats" style={{ listStyle: "none" }}>
+              Coats
+            </Link>
+            <Link to="/category/Jerseys" style={{ listStyle: "none" }}>
+              Jerseys
+            </Link>
+            <Link to="/category/Shorts" style={{ listStyle: "none" }}>
+              Shorts
+            </Link>
+          </ul>
+          <CartWidget />
+        </div>
+      </>
     </div>
   );
 };
