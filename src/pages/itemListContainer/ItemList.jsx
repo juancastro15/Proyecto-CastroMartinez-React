@@ -1,13 +1,29 @@
-const ItemList = ({ greeting }) => {
+import { ProductCard } from "../../components/productCard/ProductCard";
+
+const ItemList = ({ items }) => {
+  console.log(items);
   return (
     <div
       style={{
         display: "flex",
-        justifyContent: "center",
-        height: "100vh",
+        gap: "20px",
+        marginTop: "20px",
+        flexWrap: "wrap",
+        justifyContent: "space-evenly",
       }}
     >
-      <h1>{greeting}</h1>
+      {items.map((elemento) => {
+        return (
+          <ProductCard
+            key={elemento.id}
+            title={elemento.title}
+            description={elemento.description}
+            price={elemento.price}
+            id={elemento.id}
+            img={elemento.img}
+          />
+        );
+      })}
     </div>
   );
 };
