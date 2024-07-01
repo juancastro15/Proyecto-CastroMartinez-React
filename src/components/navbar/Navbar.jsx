@@ -33,6 +33,9 @@ export const Navbar = () => {
             <Link to="/category/Shorts" style={{ listStyle: "none" }}>
               Shorts
             </Link>
+            <Link to="/category/Hats" style={{ listStyle: "none" }}>
+              Hats
+            </Link>
           </ul>
           <CartWidget />
         </div>

@@ -1,4 +1,4 @@
-import CounterContainer from "../../components/counter/CounterContainer";
+import CounterContainer from "../../components/counter/CounetContainer";
 
 const ItemDetail = ({ item }) => {
   return (
