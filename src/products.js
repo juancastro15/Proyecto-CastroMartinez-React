@@ -6,7 +6,7 @@ export let products = [
     category: "Jerseys",
     price: 50,
     stock: 3,
-    img: "real-madrid.webp",
+    img: "https://res.cloudinary.com/dcyvajngc/image/upload/v1719959054/real-madrid_opwtjw.webp",
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ export let products = [
     category: "Jerseys",
     price: 45,
     stock: 8,
-    img: "barcelona-fc.webp",
+    img: "https://res.cloudinary.com/dcyvajngc/image/upload/v1719959049/barcelona-fc_ndzu4r.webp",
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ export let products = [
     category: "Jerseys",
     price: 40,
     stock: 12,
-    img: "man-united.jpeg",
+    img: "https://res.cloudinary.com/dcyvajngc/image/upload/v1719959052/man-united_sjrjpx.jpg",
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ export let products = [
     category: "Jerseys",
     price: 55,
     stock: 6,
-    img: "juventus.png",
+    img: "https://res.cloudinary.com/dcyvajngc/image/upload/v1719959050/juventus_attey0.png",
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ export let products = [
     category: "Jerseys",
     price: 60,
     stock: 7,
-    img: "bayern.webp",
+    img: "https://res.cloudinary.com/dcyvajngc/image/upload/v1719959049/bayern_tjmg6h.webp",
   },
   {
     id: 6,
@@ -51,7 +51,7 @@ export let products = [
     category: "Jerseys",
     price: 50,
     stock: 1,
-    img: "liverpool.webp",
+    img: "https://res.cloudinary.com/dcyvajngc/image/upload/v1719959050/liverpool_bebbvj.webp",
   },
   {
     id: 7,
@@ -60,7 +60,7 @@ export let products = [
     category: "Jerseys",
     price: 55,
     stock: 5,
-    img: "psg.jpeg",
+    img: "https://res.cloudinary.com/dcyvajngc/image/upload/v1719959053/psg_pfnkdo.jpg",
   },
   {
     id: 8,
@@ -69,7 +69,7 @@ export let products = [
     category: "Jerseys",
     price: 45,
     stock: 10,
-    img: "man-city.webp",
+    img: "https://res.cloudinary.com/dcyvajngc/image/upload/v1719959051/man-city_oh7a6k.webp",
   },
   {
     id: 20,
@@ -78,7 +78,7 @@ export let products = [
     category: "Coats",
     price: 20,
     stock: 10,
-    img: "tottenham-bufanda.webp",
+    img: "https://res.cloudinary.com/dcyvajngc/image/upload/v1719959055/tottenham-bufanda_fv15oo.webp",
   },
   {
     id: 21,
@@ -87,7 +87,7 @@ export let products = [
     category: "Coats",
     price: 18,
     stock: 15,
-    img: "bu-atl-mad.jpeg",
+    img: "https://res.cloudinary.com/dcyvajngc/image/upload/v1719959049/bu-atl-mad_dvlalw.jpg",
   },
   {
     id: 22,
@@ -96,7 +96,7 @@ export let products = [
     category: "Coats",
     price: 22,
     stock: 12,
-    img: "inter-milan-bufanda.jpeg",
+    img: "https://res.cloudinary.com/dcyvajngc/image/upload/v1719959050/inter-milan-bufanda_fzmd2u.jpg",
   },
   {
     id: 23,
@@ -105,7 +105,7 @@ export let products = [
     category: "Coats",
     price: 25,
     stock: 9,
-    img: "bvb-bufanda.webp",
+    img: "https://res.cloudinary.com/dcyvajngc/image/upload/v1719959049/bvb-bufanda_zl8msp.webp",
   },
   {
     id: 30,
@@ -114,7 +114,7 @@ export let products = [
     category: "Hat",
     price: 20,
     stock: 5,
-    img: "real-madrid-gorra.webp",
+    img: "https://res.cloudinary.com/dcyvajngc/image/upload/v1719959054/real-madrid-gorra_fnnffc.webp",
   },
   {
     id: 31,
@@ -123,7 +123,7 @@ export let products = [
     category: "Hat",
     price: 18,
     stock: 7,
-    img: "milan-gorra.jpeg",
+    img: "https://res.cloudinary.com/dcyvajngc/image/upload/v1719959053/milan-gorra_bg0xuf.jpg",
   },
   {
     id: 32,
@@ -132,7 +132,7 @@ export let products = [
     category: "Hat",
     price: 22,
     stock: 3,
-    img: "chelsea-gorra.webp",
+    img: "https://res.cloudinary.com/dcyvajngc/image/upload/v1719959050/chelsea-gorra_xvbmi3.webp",
   },
   {
     id: 41,
@@ -141,7 +141,7 @@ export let products = [
     category: "Shorts",
     price: 28,
     stock: 8,
-    img: "barcelona-shorts.jpeg",
+    img: "https://res.cloudinary.com/dcyvajngc/image/upload/v1719959049/barcelona-shorts_pkbflf.jpg",
   },
   {
     id: 42,
@@ -150,7 +150,7 @@ export let products = [
     category: "Shorts",
     price: 25,
     stock: 12,
-    img: "man-united-shorts.webp",
+    img: "https://res.cloudinary.com/dcyvajngc/image/upload/v1719959052/man-united-shorts_ewyfbu.jpg",
   },
   {
     id: 43,
@@ -159,7 +159,7 @@ export let products = [
     category: "Hats",
     price: 25,
     stock: 5,
-    img: "boca-bucket-hat.jpeg",
+    img: "https://res.cloudinary.com/dcyvajngc/image/upload/v1719959049/boca-bucket-hat_xrn3uw.jpg",
   },
   {
     id: 44,
@@ -168,6 +168,6 @@ export let products = [
     category: "Hats",
     price: 25,
     stock: 5,
-    img: "maradona-hat.webp",
+    img: "https://res.cloudinary.com/dcyvajngc/image/upload/v1719959053/maradona-hat_luqiqy.webp",
   },
 ];
