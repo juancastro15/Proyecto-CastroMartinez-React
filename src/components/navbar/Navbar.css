@@ -1,7 +1,7 @@
 .navbarContainer {
   background-color: #fff;
   border-bottom: 2px solid #111111;
-  margin: 0px 5px;
+  padding: 5px;
   display: flex;
   width: 100%;
   justify-content: space-between;
