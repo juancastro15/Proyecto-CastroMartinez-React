@@ -13,7 +13,7 @@ export const ProductCard = ({ title, description, price, id, img }) => {
     <Card sx={{ width: 345 }}>
       <CardMedia
         component={"img"}
-        sx={{ height: 140, width: "100%" }}
+        s={{ height: 140, width: "100%" }}
         image={img}
         title="green iguana"
       />
@@ -25,7 +25,7 @@ export const ProductCard = ({ title, description, price, id, img }) => {
           {description}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          {price}
+          €{price}
         </Typography>
       </CardContent>
       <CardActions>

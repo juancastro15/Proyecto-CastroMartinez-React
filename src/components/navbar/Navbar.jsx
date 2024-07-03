@@ -21,19 +21,19 @@ export const Navbar = () => {
           </Link>
 
           <ul className="categories" style={{ display: "flex", gap: "20px" }}>
-            <Link to="/" style={{ listStyle: "none" }}>
+            <Link to="/" className="button">
               All
             </Link>
-            <Link to="/category/Coats" style={{ listStyle: "none" }}>
+            <Link to="/category/Coats" className="button">
               Coats
             </Link>
-            <Link to="/category/Jerseys" style={{ listStyle: "none" }}>
+            <Link to="/category/Jerseys" className="button">
               Jerseys
             </Link>
-            <Link to="/category/Shorts" style={{ listStyle: "none" }}>
+            <Link to="/category/Shorts" className="button">
               Shorts
             </Link>
-            <Link to="/category/Hats" style={{ listStyle: "none" }}>
+            <Link to="/category/Hats" className="button">
               Hats
             </Link>
           </ul>

@@ -8,3 +8,47 @@
   min-height: 10vh;
   align-items: center;
 }
+
+.categories {
+  font-family: "Bungee Hairline", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #111111;
+}
+
+.button {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  font-size: 1.5em; /* Ajusta el tamaño del texto según tu necesidad */
+  color: #000; /* Color del texto normal */
+  text-decoration: none;
+  transition: color 0.3s ease-in-out; /* Transición suave para el cambio de color */
+}
+
+/* line animation on hover */
+.button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* Ajusta la posición vertical de la línea */
+  width: 100%;
+  height: 2px;
+  background-color: #37ff8b; /* Color de la línea */
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.button:hover {
+  color: #37ff8b; /* Color del texto cuando se hace hover */
+}
+
+.button:hover::after {
+  transform: scaleX(1);
+}
