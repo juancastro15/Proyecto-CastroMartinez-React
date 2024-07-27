@@ -24,8 +24,8 @@ export const Navbar = () => {
             <Link to="/" className="button">
               All
             </Link>
-            <Link to="/category/Coats" className="button">
-              Coats
+            <Link to="/category/Scarf" className="button">
+              Scarf
             </Link>
             <Link to="/category/Jerseys" className="button">
               Jerseys
