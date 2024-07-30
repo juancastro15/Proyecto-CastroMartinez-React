@@ -2,6 +2,7 @@ import ItemList from "./ItemList";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
+import { Button } from "@mui/material";
 import { db } from "../../firebaseConfig";
 import { collection, getDocs, query, where } from "firebase/firestore";
 
@@ -39,7 +40,7 @@ const ItemListContainer = () => {
     <div>
       {
         <Button variant="contained" onClick={addProducts}>
-          Agregar productos
+          Add Product
         </Button>
       }
       <ItemList items={items} />
