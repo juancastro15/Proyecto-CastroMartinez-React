@@ -1,49 +1,52 @@
-import ItemList from "./ItemList";
-import { useState, useEffect } from "react";
+// ItemListContainer.jsx
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-
 import { Button } from "@mui/material";
 import { db } from "../../firebaseConfig";
-import { collection, getDocs, query, where } from "firebase/firestore";
+import { collection, getDocs, query, where, addDoc } from "firebase/firestore";
+import { products } from "../../products";
+import ItemList from "./ItemList";
 
 const ItemListContainer = () => {
   const { name } = useParams();
   const [items, setItems] = useState([]);
-  //const [error, setError] = useState({});
 
   useEffect(() => {
-    let productsCollection = collection(db, "products");
+    const fetchProducts = async () => {
+      let productsCollection = collection(db, "products");
+      let consulta = productsCollection;
 
-    let consulta = productsCollection;
-    if (name) {
-      consulta = query(productsCollection, where("category", "==", name));
-    }
+      if (name) {
+        consulta = query(productsCollection, where("category", "==", name));
+      }
 
-    let getProducts = getDocs(consulta);
-    getProducts.then((res) => {
+      const res = await getDocs(consulta);
       let arrayValido = res.docs.map((product) => {
         return { ...product.data(), id: product.id };
       });
       setItems(arrayValido);
-    });
+    };
+
+    fetchProducts();
   }, [name]);
 
-  const addProducts = () => {
+  const addProducts = async () => {
     let productsCollection = collection(db, "products");
 
-    products.forEach((elemento) => {
-      addDoc(productsCollection, elemento);
-    });
+    for (let elemento of products) {
+      await addDoc(productsCollection, elemento);
+    }
+
+    console.log("Products successfully uploaded");
   };
 
   return (
     <div>
-      {
-        <Button variant="contained" onClick={addProducts}>
-          Add Product
-        </Button>
-      }
+      {/* <Button variant="contained" onClick={addProducts}>
+        Agregar productos
+      </Button> */}
       <ItemList items={items} />
+      {/* {items.length === 0 ? <h1>Cargando.....</h1> : <ItemList items={items} />} */}
     </div>
   );
 };

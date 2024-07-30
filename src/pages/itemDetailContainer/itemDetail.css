@@ -4,25 +4,37 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
 }
 
 .containerImage {
-  width: 40%;
+  width: 60%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .containerImage > img {
-  width: 50%;
-  height: 300px;
+  width: 70%;
+  height: auto;
   object-fit: cover;
 }
 
 .containerDetail {
-  width: 60%;
+  width: 50%;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  height: 300px;
+  height: 200px;
   color: #7f669d;
+}
+
+.containerDetail h2 {
+  font-size: 20px;
+  color: #111111;
+}
+
+.containerDetail span {
+  font-size: 23px;
+  font-weight: bold;
+  color: #333333;
 }
