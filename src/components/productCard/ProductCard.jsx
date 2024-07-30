@@ -9,6 +9,7 @@ import {
 import { Link } from "react-router-dom";
 import { db } from "../../firebaseConfig";
 import { collection, deleteDoc, doc } from "firebase/firestore";
+import "./productCard.css";
 
 export const ProductCard = ({ title, description, price, id, img }) => {
   const eliminar = () => {
@@ -23,7 +24,7 @@ export const ProductCard = ({ title, description, price, id, img }) => {
         component={"img"}
         s={{ height: 140, width: "100%" }}
         image={img}
-        title="green iguana"
+        title={title}
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
@@ -36,14 +37,19 @@ export const ProductCard = ({ title, description, price, id, img }) => {
           €{price}
         </Typography>
       </CardContent>
-      <CardActions>
+      <CardActions className="cardActions">
         <Link to={`/itemDetail/${id}`}>
-          <Button size="small" variant="outlined">
-            Ver mas
+          <Button className="moreButton" size="small" variant="outlined">
+            More
           </Button>
         </Link>
-        <Button size="small" variant="outlined" onClick={eliminar}>
-          eliminar
+        <Button
+          className="deleteButton"
+          size="small"
+          variant="outlined"
+          onClick={eliminar}
+        >
+          Delete
         </Button>
       </CardActions>
     </Card>

@@ -11,15 +11,15 @@ export const Counter = ({ restar, contador, sumar, onAdd }) => {
       }}
     >
       <Button variant="contained" onClick={restar}>
-        Restar
+        Less
       </Button>
       <h2> {contador} </h2>
       <Button variant="contained" onClick={sumar}>
-        Sumar
+        More
       </Button>
 
       <Button variant="outlined" onClick={() => onAdd(contador)}>
-        Agregar al carrito
+        Add to the Cart
       </Button>
     </div>
   );

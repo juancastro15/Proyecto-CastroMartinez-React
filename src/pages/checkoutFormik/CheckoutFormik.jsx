@@ -6,33 +6,32 @@ const CheckoutFormik = () => {
   const { handleSubmit, handleChange, values, errors } = useFormik({
     initialValues: { nombre: "", email: "", contraseña: "", confirmar: "" },
     onSubmit: (data) => {
-      console.log("se envia");
+      console.log("submitted");
       console.log(data);
     },
     validationSchema: Yup.object({
       nombre: Yup.string()
-        .required("este campo es obligatorio")
-        .min(5, "minimo 5")
-        .max(15, "maximo 15"),
+        .required("This field is required")
+        .min(5, "Minimum 5 characters")
+        .max(15, "Maximum 15 characters"),
       email: Yup.string()
-        .email("el email debe tener @")
-        .required("este campo es obligatorio"),
+        .email("Email must contain @")
+        .required("This field is required"),
       contraseña: Yup.string()
-        .required("este campo es obligatorio")
+        .required("This field is required")
         .matches(
           /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])/,
-          "debe tener una mayuscula y bla bla"
+          "It must include an uppercase letter, a lowercase letter, a number, and a special character"
         ),
       confirmar: Yup.string()
-        .required("este campo es obligatorio")
-        .oneOf([Yup.ref("contraseña")], "las contraseñas no coinciden"),
+        .required("This field is required")
+        .oneOf([Yup.ref("contraseña")], "Passwords do not match"),
     }),
     validateOnChange: false,
   });
 
-  //   console.log(values);
-  console.log(errors); // {email: "dsadsa", nombre:"dsa"} - {}
-  console.log(errors.nombre); // ---> undefined | texto
+  console.log(errors);
+  console.log(errors.nombre);
 
   return (
     <form
@@ -54,7 +53,7 @@ const CheckoutFormik = () => {
         error={errors.nombre ? true : false}
         helperText={errors.nombre}
       />
-      {/* {errors.nombre && <span> {errors.nombre}</span>} */}
+
       <TextField
         variant="outlined"
         type="text"
@@ -92,7 +91,7 @@ const CheckoutFormik = () => {
         />
       )}
       <Button type="submit" variant="contained">
-        Registrar
+        Register
       </Button>
     </form>
   );

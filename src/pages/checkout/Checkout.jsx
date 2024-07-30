@@ -4,6 +4,7 @@ import { addDoc, collection, doc, updateDoc } from "firebase/firestore";
 import { db } from "../../firebaseConfig";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
+import { Button, TextField } from "@mui/material";
 
 const Checkout = () => {
   const navigate = useNavigate(); // ---> es una funcion
@@ -32,7 +33,7 @@ const Checkout = () => {
     addDoc(ordersCollection, order)
       .then((res) => {
         setOrderId(res.id);
-        toast.success(`Gracias por tu compra , tu ticket es ${res.id} `);
+        toast.success(`Awesome, Your purchase ticket number is ${res.id} `);
       })
       .catch()
       .finally(() => {
@@ -47,31 +48,48 @@ const Checkout = () => {
 
   return (
     <div>
-      <h1>Aca va el formulario</h1>
+      <h1>Please complete your information to proceed with the purchase</h1>
       {orderId ? (
-        <h2>Gracias por tu compra, tu ticket es : {orderId}</h2>
+        <h2>Awesome, Your purchase ticket number is : {orderId}</h2>
       ) : (
-        <form onSubmit={envioDeFormulario}>
-          <input
+        <form
+          onSubmit={envioDeFormulario}
+          style={{
+            margin: "50px",
+            display: "flex",
+            flexDirection: "column",
+            width: "50%",
+            gap: "20px",
+          }}
+        >
+          <TextField
+            variant="outlined"
             type="text"
-            placeholder="Ingresa tu nombre"
-            onChange={capturarData}
+            label="Name"
+            placeholder="Write your Name"
             name="nombre"
+            onChange={capturarData}
           />
-          <input
+          <TextField
+            variant="outlined"
             type="text"
-            placeholder="Ingresa tu email"
+            label="Email"
+            placeholder="example@goat.com"
             name="email"
             onChange={capturarData}
           />
-          <input
+          <TextField
+            variant="outlined"
             type="text"
-            placeholder="Ingresa tu telefono"
+            label="Phone"
+            placeholder="+341234567"
             name="telefono"
             onChange={capturarData}
           />
 
-          <button>comprar</button>
+          <Button type="submit" variant="contained">
+            Pay
+          </Button>
         </form>
       )}
     </div>
