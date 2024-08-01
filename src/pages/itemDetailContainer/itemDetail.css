@@ -8,13 +8,13 @@
 }
 
 .containerImage {
-  width: 60%;
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .containerImage > img {
-  width: 70%;
+  width: 50%;
   height: auto;
   object-fit: cover;
 }
