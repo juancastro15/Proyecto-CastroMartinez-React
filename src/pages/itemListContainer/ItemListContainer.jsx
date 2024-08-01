@@ -42,11 +42,7 @@ const ItemListContainer = () => {
 
   return (
     <div>
-      {/* <Button variant="contained" onClick={addProducts}>
-        Agregar productos
-      </Button> */}
       <ItemList items={items} />
-      {/* {items.length === 0 ? <h1>Cargando.....</h1> : <ItemList items={items} />} */}
     </div>
   );
 };

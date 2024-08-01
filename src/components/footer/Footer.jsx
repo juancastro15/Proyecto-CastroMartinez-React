@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <>
       <div className="footerContainer">
-        <p>Derechos de autor reservados La Cabra Corp ®</p>
+        <p>La Cabra Corp. All Rights Reserved ®</p>
       </div>
     </>
   );

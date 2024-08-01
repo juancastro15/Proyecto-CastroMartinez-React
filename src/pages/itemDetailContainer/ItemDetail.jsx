@@ -6,19 +6,18 @@ const ItemDetail = ({ item, onAdd, initial }) => {
       <div>
         <div className={"containerItemDetail"}>
           <div className={"containerImage"}>
-            <img src={item.img} alt="" />
+            <img src={item.img} alt={item.title} />
           </div>
 
           <div className={"containerDetail"}>
             <h2 style={{ fontFamily: "monospace" }}>
-              <span style={{ fontSize: "20px" }}>Item:</span> {item.title}
+              <span>Item:</span> {item.title}
             </h2>
             <h2 style={{ fontFamily: "monospace" }}>
-              <span style={{ fontSize: "20px" }}>Description:</span>{" "}
-              {item.description}
+              <span>Description:</span> {item.description}
             </h2>
             <h2 style={{ fontFamily: "monospace" }}>
-              <span style={{ fontSize: "20px" }}>Price:</span> ${item.price}
+              <span>Price:</span> ${item.price}
             </h2>
           </div>
         </div>

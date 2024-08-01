@@ -40,7 +40,7 @@ export const ProductCard = ({ title, description, price, id, img }) => {
       <CardActions className="cardActions">
         <Link to={`/itemDetail/${id}`}>
           <Button className="moreButton" size="small" variant="outlined">
-            More
+            <p>More</p>
           </Button>
         </Link>
         <Button
@@ -49,7 +49,7 @@ export const ProductCard = ({ title, description, price, id, img }) => {
           variant="outlined"
           onClick={eliminar}
         >
-          Delete
+          <p>Delete</p>
         </Button>
       </CardActions>
     </Card>

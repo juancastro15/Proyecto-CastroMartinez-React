@@ -9,7 +9,7 @@ const CartWidget = () => {
   let total = getTotalItems();
   return (
     <Link to="/cart">
-      <Badge badgeContent={0} color="primary" showZero={true}>
+      <Badge badgeContent={total} color="primary" showZero={true}>
         <IoBagOutline color="black" size={40} />
       </Badge>
     </Link>

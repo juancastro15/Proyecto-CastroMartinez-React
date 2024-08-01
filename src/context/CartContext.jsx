@@ -4,18 +4,19 @@ export const CartContext = createContext();
 
 const CartContextProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
-  // funcion modificar
+
+  // Agrega un producto al carrito
   const addToCart = (product) => {
-    let existe = isInCart(product.id);
-    if (existe) {
-      let newArray = cart.map((elemento) => {
-        if (elemento.id === product.id) {
+    let exists = isInCart(product.id);
+    if (exists) {
+      let newArray = cart.map((item) => {
+        if (item.id === product.id) {
           return {
-            ...elemento,
-            quantity: product.quantity,
+            ...item,
+            quantity: item.quantity + product.quantity, // Acumulando la cantidad
           };
         } else {
-          return elemento;
+          return item;
         }
       });
       setCart(newArray);
@@ -24,38 +25,39 @@ const CartContextProvider = ({ children }) => {
     }
   };
 
+  // Limpia el carrito
   const clearCart = () => {
     setCart([]);
   };
 
+  // Verifica si el producto ya está en el carrito
   const isInCart = (id) => {
-    let existe = cart.some((product) => product.id === id); // true - false
-    return existe;
+    return cart.some((product) => product.id === id);
   };
 
+  // Elimina un producto del carrito
   const deleteProduct = (id) => {
-    console.log(id);
-    let newArr = cart.filter((elemento) => elemento.id !== id);
+    let newArr = cart.filter((item) => item.id !== id);
     setCart(newArr);
   };
 
+  // Obtiene la cantidad de un producto por ID
   const getQuantityById = (id) => {
-    let productoEncontrado = cart.find((product) => product.id === id);
-    return productoEncontrado?.quantity;
+    let foundProduct = cart.find((product) => product.id === id);
+    return foundProduct?.quantity;
   };
 
+  // Obtiene el precio total de todos los productos en el carrito
   const getTotalPrice = () => {
-    let total = cart.reduce((acc, elemento) => {
-      return acc + elemento.price * elemento.quantity;
+    let total = cart.reduce((acc, item) => {
+      return acc + item.price * item.quantity;
     }, 0);
     return total;
   };
-  // cantidad de elementos
+
+  // Obtiene el número total de productos únicos en el carrito
   const getTotalItems = () => {
-    let total = cart.reduce((acc, elemento) => {
-      return acc + elemento.quantity;
-    }, 0);
-    return total;
+    return cart.length;
   };
 
   let data = {

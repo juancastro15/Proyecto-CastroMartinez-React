@@ -8,7 +8,7 @@ const CounterContainer = ({ onAdd, stock, initial = 1 }) => {
     if (contador < stock) {
       setContador(contador + 1);
     } else {
-      alert("stock maximo");
+      alert("Maximum stock");
     }
   };
 
@@ -16,10 +16,9 @@ const CounterContainer = ({ onAdd, stock, initial = 1 }) => {
     if (contador > 1) {
       setContador(contador - 1);
     } else {
-      alert("Minimo");
+      alert("Minimum");
     }
   };
-  // las unidades
 
   return (
     <Counter contador={contador} sumar={sumar} restar={restar} onAdd={onAdd} />

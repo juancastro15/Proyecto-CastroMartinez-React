@@ -30,11 +30,11 @@ const ItemDetailContainer = () => {
     Swal.fire({
       position: "center",
       icon: "success",
-      title: "Producto Agregado",
+      title: "added to the cart",
       showConfirmButton: true,
       timer: 1500,
     });
-    toast.success("Producto Agregado");
+    toast.success("The product was added successfully");
   };
 
   return <ItemDetail item={item} onAdd={onAdd} initial={initial} />;

@@ -11,7 +11,7 @@ export const Navbar = () => {
           <Link to="/">
             <img
               src={logo}
-              alt="logo de la empresa"
+              alt="company logo"
               style={{
                 width: "100px",
                 height: "100px",
