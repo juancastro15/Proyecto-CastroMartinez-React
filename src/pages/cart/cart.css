@@ -65,6 +65,6 @@
 }
 
 .checkoutButton.inactive {
-  background-color: red;
+  background-color: #25d366;
   color: #fff;
 }
