@@ -53,7 +53,6 @@ const CheckoutFormik = () => {
         error={errors.nombre ? true : false}
         helperText={errors.nombre}
       />
-
       <TextField
         variant="outlined"
         type="text"
